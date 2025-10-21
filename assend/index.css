@@ -1,0 +1,193 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: white;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Fundo fixo */
+    .hero {
+      height: 100vh;
+      background: url('../img/handebol-capa.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 20px rgba(0,0,0,0.8);
+      font-size: 5rem;
+      font-weight: 700;
+    }
+    .introducao{
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: #004aad;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 60px 10%;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .historia, .modalidades {
+      background: white;
+    }
+
+    .historia-brasil, .selecoes {
+      background: #002d72;
+      color: white;
+    }
+
+    .melhores {
+      background: #007f3d;
+      color: white;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    /* Layout História */
+    .historia-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .historia-content img {
+      width: 40%;
+      min-width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .historia-content .texto {
+      flex: 1;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 360px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border: none;
+      margin-top: 25px;
+    }
+
+    /* Handebol no Brasil */
+    .brasil-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .brasil-content iframe {
+      flex: 1;
+      max-width: 500px;
+      height: 320px;
+    }
+
+    .brasil-content .texto {
+      flex: 2;
+    }
+
+    .brasil-imagens {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .brasil-imagens img {
+      width: 30%;
+      min-width: 240px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Botões */
+    .botoes {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .botoes a {
+      background: linear-gradient(90deg, #004aad, #007f3d);
+      color: white;
+      text-decoration: none;
+      padding: 18px 35px;
+      margin: 12px;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+    }
+
+    .botoes a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Carrossel automático com nomes */
+    .carrossel {
+      overflow: hidden;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .carrossel-content {
+      display: flex;
+      align-items: center;
+      animation: slideAtletas 25s linear infinite;
+    }
+
+    .carrossel-item {
+      text-align: center;
+      margin: 0 15px;
+    }
+
+    .carrossel img {
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .carrossel p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    @keyframes slideAtletas {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
